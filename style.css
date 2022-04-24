@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary-color: #fdfdff;
+    --secondary-color: #000000;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ min-height: 100vh;
+ background-color: var(--primary-color);
+ transition: 0.5s;
+ }
+ body.active{
+
+      background-color:  var(--secondary-color);
+ }
+#toggle{
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 50px;
+    top: 10%;
+    right: 90%;
+    border-radius: 160px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
+}
+#toggle.active{
+    background: rgb(241, 241, 241);
+    box-shadow: rgba(44, 42, 42, 0.4) 0px 30px 90px; 
+}
+#toggle .indicator{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom,rgb(27, 27, 27),rgb(12, 12, 12));
+    border-radius: 50%;
+    transform: scale(0.9) ;
+    box-shadow: rgba(252, 252, 252, 0.15) 0px 2px 8px;
+
+}
+#toggle.active .indicator{
+    left: 100px;
+    background: linear-gradient(to bottom,#fff,rgb(255, 255, 255))
+}
+
+header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left:0 ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: rgb(255, 255, 255);
+}
+header .brand{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+header.menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .menu a{
+    border: 2px solid rgb(255, 244, 244);
+    position: relative;
+    color: #fff;
+    right: -40%;
+    border-radius: 10rem;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    background: rgb(5, 5, 5);
+    margin: 0 30px;
+    padding: 10px 18px;
+    border-radius: 20px;
+    transition: all 0.3s linear;
+
+}
+h1,h2{
+    color: var(--primary-color);
+
+}
+ i{
+    height: 4px;
+    width: 10px;
+}
+#mark{
+    height: 10px;
+    width: 20px;
+}
+ul{
+    padding: 10px 20px;
+    margin: 0 auto 10px;
+}
+header .menu a:hover{
+    color: black;
+    background-color: #fff;
+    border: 2px solid black;
+
+}
